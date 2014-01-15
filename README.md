@@ -18,11 +18,11 @@ int sx1509Setup(
 )
 ```
 
-`pinBase`: base pin number (anything > 64)
-`i2cAddress`: i2c address (default 0x3E)
-`resetPin`: pin that nRST is connected to (-1 if not connected)
-`interruptPin`: pin that nINT is connected to (-1 if not connected)
-`oscillatorPin`: pin that OSCIO is connected to (-1 if not connected)
+ - `pinBase`: base pin number (anything > 64)
+ - `i2cAddress`: i2c address (default 0x3E)
+ - `resetPin`: pin that nRST is connected to (-1 if not connected)
+ - `interruptPin`: pin that nINT is connected to (-1 if not connected)
+ - `oscillatorPin`: pin that OSCIO is connected to (-1 if not connected)
 
 
 Pin mode, pullups/downs, digital input/output and pwm can now be used with the standard Wiring Pi functions.
@@ -34,9 +34,9 @@ To set the led driver settings, use:
 
 `void sx1509LEDDriverSetFreq(int pinBase, int freq, int log)`
 
-`pinBase`: the same number passed to  setup
-`freq`: 1-7
-`log`: 1 to enable logarithmic mode, 0 for linear
+ - `pinBase`: the same number passed to  setup
+ - `freq`: 1-7
+ - `log`: 1 to enable logarithmic mode, 0 for linear
 
 TODO
 ----
