@@ -258,8 +258,6 @@ int sx1509Setup(const int pinBase, const int i2cAddress, const int resetPin, con
     if((fd = wiringPiI2CSetup(i2cAddress)) < 0)
         return fd;
 
-    printf("got i2c\n");
-
     node = wiringPiNewNode(pinBase, 16);
 
     node->fd              = fd;
@@ -289,8 +287,6 @@ int sx1509Setup(const int pinBase, const int i2cAddress, const int resetPin, con
 	// Communication test. We'll read from two registers with different
 	// default values to verify communication.
 	testRegisters = wiringPiI2CReadReg16(fd, REG_INTERRUPT_MASK_A);	// This should return 0xFF00
-
-    printf("read %x\n", testRegisters);
 
 	// Then read a byte that should be 0x00
 	if(testRegisters == 0x00FF)
